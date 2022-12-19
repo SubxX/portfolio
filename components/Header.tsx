@@ -15,7 +15,7 @@ export default function Header() {
 
           <div className="profile-picture">
             <Image
-              src="/subham.png"
+              src="/subham.jpg"
               width={160}
               height={160}
               alt="Subham Bhattacharya"

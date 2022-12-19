@@ -10,7 +10,7 @@ export default function Projects() {
 
         <div className="projects-grid">
           {projects.map((itm) => (
-            <Card key={itm.title} {...itm} />
+            <Project key={itm.title} {...itm} />
           ))}
         </div>
       </div>
@@ -18,20 +18,24 @@ export default function Projects() {
   );
 }
 
-function Card({ title, description, github }: any) {
+function Project({ title, description, github, link }: any) {
   return (
-    <div className="card">
+    <div className="project">
       <p className="small-title">{title}</p>
-      <span className="card-desc">{description}</span>
-      <a
-        className="card-link"
-        target="_blank"
-        rel="noopener noreferrer"
-        href={github}
-      >
-        {getIcon("github")}
-        <span>Github</span>
-      </a>
+      <span className="text-base">{description}</span>
+      <div className="actions">
+        {Boolean(github) && (
+          <a target="_blank" rel="noopener noreferrer" href={github}>
+            {getIcon("github")}
+          </a>
+        )}
+
+        {Boolean(link) && (
+          <a target="_blank" rel="noopener noreferrer" href={link}>
+            {getIcon("external")}
+          </a>
+        )}
+      </div>
     </div>
   );
 }

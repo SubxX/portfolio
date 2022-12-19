@@ -239,8 +239,8 @@ export default function getIcon(name: string) {
     case "github":
       return (
         <svg
-          width="20"
-          height="20"
+          width="24"
+          height="24"
           role="img"
           viewBox="0 0 24 24"
           fill="currentColor"
@@ -308,6 +308,26 @@ export default function getIcon(name: string) {
         >
           <title>Gmail icon</title>
           <path d="M24 4.5v15c0 .85-.65 1.5-1.5 1.5H21V7.387l-9 6.463-9-6.463V21H1.5C.649 21 0 20.35 0 19.5v-15c0-.425.162-.8.431-1.068C.7 3.16 1.076 3 1.5 3H2l10 7.25L22 3h.5c.425 0 .8.162 1.069.432.27.268.431.643.431 1.068z"></path>
+        </svg>
+      );
+
+    case "external":
+      return (
+        <svg
+          width="24"
+          height="24"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          // color="#000"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+          ></path>
         </svg>
       );
 
